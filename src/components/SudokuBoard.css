@@ -1,0 +1,25 @@
+.sudoku-board {
+  display: inline-block;
+  border: 4px solid #333;
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sudoku-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 마지막 행은 아래쪽 보더 제거 (보드 border 사용) */
+.sudoku-row:nth-child(9) {
+  border-bottom: none;
+}
+
+/* 3x3 블록 구분을 위한 두꺼운 보더 */
+/* 각 열의 3번째, 6번째 행 뒤에 두꺼운 아래쪽 보더 (인덱스 2, 5) */
+.sudoku-row:nth-child(3),
+.sudoku-row:nth-child(6) {
+  border-bottom: 4px solid #333;
+}
